@@ -1,0 +1,401 @@
+@import url(./font.css);
+
+/* Test */
+:root {
+    --MB: 'MB', sans-serif;
+    --MM: 'MM', sans-serif;
+    --MR: 'MR', sans-serif;
+    --PO: 'Prosto-One', sans-serif;
+    --primary: #000;
+    --secondary: #fff;
+    --dark-gray: #282828;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--primary);
+}
+
+.page__header {
+    background-color: var(--dark-gray);
+    padding-block: 6px;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav__link,
+.footer__nav-link {
+    color: var(--secondary);
+    font-family: var(--MB);
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.user__action {
+    display: flex;
+    gap: 25px;
+}
+
+.burger__menu {
+    width: 30px;
+    height: 21px;
+    background-color: transparent;
+    border: none;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger__menu span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary);
+}
+
+
+.banner {
+    background-image: url(../image/banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 635px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 38px;
+}
+
+.banner__title {
+    color: var(--secondary);
+    font-family: var(--PO);
+    font-size: 100px;
+    line-height: 75px;
+}
+
+.banner__link {
+    padding: 13px 14px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    color: var(--primary);
+    font-family: var(--MM);
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.products {
+    margin-top: 30px;
+}
+
+.product__content {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.product__content:nth-child(2) {
+    margin-top: 50px;
+}
+
+.content__text {
+    margin-top: 33px;
+    color: var(--secondary);
+    font-family: var(--MM);
+    font-size: 22px;
+    line-height: 27px;
+    max-width: 528px;
+    width: 100%;
+}
+
+.content__img {
+    max-width: 552px;
+    width: 100%;
+    display: block;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.info {
+    margin-top: 50px;
+}
+
+.info__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.content__left-text,
+.content__right-text {
+    color: var(--secondary);
+    font-family: var(--MB);
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 333px;
+    width: 100%;
+}
+
+.content__left-text {
+    text-align: right;
+}
+
+.content__img__center {
+    width: 268px;
+}
+
+.category {
+    margin-top: 80px;
+    margin-bottom: 55px;
+}
+
+.category__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.content__card {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 15px 0;
+    width: 255px;
+}
+
+.card__title {
+    color: var(--primary);
+    font-family: var(--MB);
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.card__img {
+    height: 167px;
+    width: max-content;
+}
+
+.card__price {
+    color: var(--primary);
+    font-family: var(--MR);
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+}
+
+.card__btn {
+    padding: 7px 57px;
+    background-color: var(--primary);
+    color: var(--secondary);
+    text-transform: uppercase;
+    font-family: var(--MB);
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+}
+
+.page__footer {
+    background-color: var(--dark-gray);
+    padding: 80px 0;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.images {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Media Query */
+
+@media(max-width: 920px) {
+    .content__img {
+        max-width: 450px;
+        width: 100%;
+    }
+
+    .category__content {
+        gap: 20px;
+    }
+}
+
+@media(max-width: 768px) {
+    .product__content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product__content:nth-child(2){
+        flex-direction: column-reverse;
+    }
+
+    .content__text{
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .info__content{
+        flex-direction: column;
+    }
+
+    .content__left-text,
+    .content__right-text {
+        text-align: center;
+    }
+
+    .category__content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .page__footer {
+        padding: 60px 0;
+    }
+
+    .footer__content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+
+@media(max-width: 700px) {
+    .banner__title {
+        font-size: 70px;
+    }
+}
+
+@media(max-width: 500px) {
+    .user__action {
+        display: none;
+    }
+
+    .burger__menu {
+        display: flex;
+    }
+
+    .header__nav {
+        gap: 20px;
+    }
+
+    .banner {
+        height: 550px;
+        gap: 25px;
+    }
+
+    .banner__title {
+        font-size: 55px;
+        line-height: 100%;
+    }
+
+    .banner__link {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media(max-width: 425px) {
+
+    .header__nav {
+        gap: 15px;
+    }
+
+    .nav__link {
+        font-size: 16px;
+    }
+
+    .logo__img {
+        width: 80px;
+        height: 40px;
+        padding-top: 5px;
+    }
+
+    .banner {
+        height: 450px;
+    }
+
+    .content__text {
+        font-size: 18px;
+        line-height: 120%;
+    }
+
+    .product__content:nth-child(2) {
+        margin-top: 30px;
+    }
+
+    .content__left-text,
+    .content__right-text {
+        font-family: var(--MM);
+    }
+
+    .page__footer {
+        padding: 40px 0;
+    }
+}
+
+@media(max-width: 375px) {
+    .banner__title {
+        font-size: 45px;
+    }
+    .banner {
+        height: 400px;
+    }
+    .content__text {
+        font-size: 16px;
+        line-height: 120%;
+    }
+}
+
+@media(max-width: 350px) {
+    .nav__link {
+        font-size: 14px;
+    }
+}
